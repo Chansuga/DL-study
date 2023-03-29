@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.12.2)  29 MAR 2023 08:53
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.12.2)  29 MAR 2023 16:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -126,8 +126,8 @@ Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
 \pgfmath@stack@operation=\toks25
 ) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count284
-))) (c:/texlive/2022/texmf-dist/tex/latex/extsizes/size8.clo
-File: size8.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+))) (c:/texlive/2022/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 ) (c:/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
@@ -794,7 +794,7 @@ File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \tikz@expandcount=\count371
 (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemeBoadilla.sty (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemerose.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemedolphin.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty)) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
+))) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemeBoadilla.sty (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemerose.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemedolphin.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty)) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
 File: l3backend-dvipdfmx.def 2022-10-26 L3 backend support: dvipdfmx
 \g__graphics_track_int=\count372
 \l__pdf_internal_box=\box164
@@ -833,23 +833,23 @@ LaTeX Font Info:    ... okay on input line 21.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(8.50012pt, 347.19511pt, 8.50012pt)
+* h-part:(L,W,R)=(10.00002pt, 344.19533pt, 10.00002pt)
 * v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
 * \paperwidth=364.19536pt
 * \paperheight=273.14662pt
-* \textwidth=347.19511pt
+* \textwidth=344.19533pt
 * \textheight=244.6939pt
-* \oddsidemargin=-63.76987pt
-* \evensidemargin=-63.76987pt
+* \oddsidemargin=-62.26997pt
+* \evensidemargin=-62.26997pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
-* \topskip=9.0pt
+* \topskip=10.0pt
 * \footskip=14.22636pt
-* \marginparwidth=4.0pt
-* \marginparsep=10.0pt
+* \marginparwidth=3.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
-* \skip\footins=7.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -888,9 +888,9 @@ File: ./AI_ML_DL.png Graphic file (type bmp)
 [2
 
 ]
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <8> not available
+LaTeX Font Info:    Font shape `JT1/gt/bx/n' in size <10> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 64.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <8> not available
+LaTeX Font Info:    Font shape `JY1/gt/bx/n' in size <10> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 64.
 Missing character: There is no 6 in font nullfont!
 LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
@@ -909,13 +909,13 @@ LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inpu
 (c:/texlive/2022/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 64.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 64.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 64.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 64.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 64.
 File: ./NN.png Graphic file (type bmp)
 <./NN.png>
@@ -933,6 +933,10 @@ Missing character: There is no 2 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 8 in font nullfont!
+
+Overfull \vbox (2.17717pt too high) detected at line 99
+ []
+
 [5
 
 ]
@@ -982,7 +986,11 @@ Missing character: There is no 4 in font nullfont!
 Missing character: There is no 7 in font nullfont!
 [20
 
-] [21
+]
+Overfull \vbox (2.85864pt too high) detected at line 347
+ []
+
+[21
 
 ] [22
 
@@ -1005,12 +1013,12 @@ Package rerunfilecheck Info: File `Capter2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29248 strings out of 475427
- 599817 string characters out of 5791344
- 909534 words of memory out of 5000000
- 50388 multiletter control sequences out of 15000+600000
- 490203 words of font info for 105 fonts, out of 8000000 for 9000
+ 29288 strings out of 475427
+ 601140 string characters out of 5791344
+ 909637 words of memory out of 5000000
+ 50420 multiletter control sequences out of 15000+600000
+ 491223 words of font info for 109 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  128i,15n,122p,443b,1095s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/Capter2.dvi (24 pages, 151204 bytes).
+Output written on out/Capter2.dvi (24 pages, 150888 bytes).
