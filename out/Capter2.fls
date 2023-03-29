@@ -1379,6 +1379,17 @@ INPUT c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.te
 INPUT c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 INPUT c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 INPUT c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
+INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
+INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
+INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
+INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
+INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
+INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
+INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
+INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
+INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
+INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
 INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemeBoadilla.sty
 INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemeBoadilla.sty
 INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemeBoadilla.sty
@@ -1434,6 +1445,8 @@ INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty
 INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty
 INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty
 INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth8.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth8.tfm
 INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
 INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
 INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
@@ -1489,11 +1502,11 @@ INPUT out/Capter2.nav
 INPUT out/Capter2.nav
 INPUT out/Capter2.nav
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 OUTPUT out/Capter2.dvi
 INPUT ./AI_ML_DL.png
@@ -1502,8 +1515,6 @@ INPUT ./AI_ML_DL.png
 INPUT extractbb -B cropbox -O ./AI_ML_DL.png
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth8.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth8.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
@@ -1574,8 +1585,8 @@ INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssxi8.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssxi8.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssxi8.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin6.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/min6.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth6.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth6.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 OUTPUT out/Capter2.nav
 OUTPUT out/Capter2.toc

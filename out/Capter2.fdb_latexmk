@@ -1,24 +1,24 @@
 # Fdb version 4
-["dvipdf"] 1680060029 "out/Capter2.dvi" "out/Capter2.pdf" "out/Capter2" 1680060030 0
-  "out/Capter2.dvi" 1680060029 131428 43ded6479200c1ab92b8cf8f0dcbfabb "latex"
+["dvipdf"] 1680076003 "out/Capter2.dvi" "out/Capter2.pdf" "out/Capter2" 1680076004 0
+  "out/Capter2.dvi" 1680076002 131328 cd810b69920ceefe16c3f588e5ef6be2 "latex"
   (generated)
   "out/Capter2.pdf"
   (rewritten before read)
-["latex"] 1680060024 "c:/Users/sugay/Desktop/DL-study/Capter2.tex" "out/Capter2.dvi" "Capter2" 1680060030 0
+["latex"] 1680075997 "c:/Users/sugay/Desktop/DL-study/Capter2.tex" "out/Capter2.dvi" "Capter2" 1680076004 0
   "AI_ML_DL.png" 1680048390 531485 837ae1d861d670645d65e7a24d3da522 ""
   "CIFAR10.jpeg" 1680048390 482145 ed6981310f2e218cb331527d0b0665d1 ""
-  "Capter2.tex" 1680060019 18806 e19921d89d79588213a947e607bc3038 ""
+  "Capter2.tex" 1680075996 18805 a9a5e340b0ca2f86c2b7840ba60b5881 ""
   "MNIST.jpeg" 1680048390 173019 65e0cc6b7bb4781dec7d350b99a4dd72 ""
   "NN.png" 1680048390 416154 74c2f35ee1e1d14f602b689438882f1b ""
-  "c:/Users/sugay/Desktop/DL-study/Capter2.tex" 1680060019 18806 e19921d89d79588213a947e607bc3038 ""
+  "c:/Users/sugay/Desktop/DL-study/Capter2.tex" 1680075996 18805 a9a5e340b0ca2f86c2b7840ba60b5881 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1677218410 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1677222352 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
+  "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth6.tfm" 1677222352 1196 977af188465e721f1f65facb66282510 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth8.tfm" 1677222352 1196 f76ab7ae43ed1dfe29b9e6ec2933fdb4 ""
-  "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm" 1677222352 1196 1be730212205a270378fba11a44765dc ""
-  "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/min6.tfm" 1677222352 1196 ede67ffb8cb4a6a8b9436c82b428664c ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/min8.tfm" 1677222352 1196 d5b431ce76e19b70391960a9dd08fa4f ""
+  "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm" 1677222352 856 7404843a5f798859944d7973a47821d5 ""
+  "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth6.tfm" 1677222352 856 29a8f8e24a069e7c876dbadd823f6c59 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth8.tfm" 1677222352 856 8bfd9428b6290f70fd02322c8acb67da ""
-  "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm" 1677222352 856 39c171483fe1bb7d0e1368980c0c205b ""
-  "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin6.tfm" 1677222352 856 e782a1e1d78799594d137f0fef162b39 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin8.tfm" 1677222352 856 bdef40bcf3aed4751efa9be9bfa6eb4b ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1677215145 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1677215145 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -172,6 +172,7 @@
   "c:/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemedolphin.sty" 1677215680 1050 4ec1d035d43d8d85e0e02ebd9fd341f3 ""
   "c:/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemerose.sty" 1677215680 853 82dd210288d1106dcf8014b257a62279 ""
   "c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty" 1677215680 4236 21e590075d6781cc58fee783316ee268 ""
+  "c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty" 1677215680 333 48f83c1a5bf00cbab1ca9013199d6da1 ""
   "c:/texlive/2022/texmf-dist/tex/latex/beamer/beamericonarticle.20.pdf" 1677215680 2958 4e0c4a6e994e5c4d9da11c477e927f0f ""
   "c:/texlive/2022/texmf-dist/tex/latex/beamer/beamericonarticle.pdf" 1677215680 2936 6cc3ef0682cbb62be8aa1b19f0a84ed6 ""
   "c:/texlive/2022/texmf-dist/tex/latex/beamer/beamericonbook.20.pdf" 1677215680 2734 0bcf939051dd2a936cdfe5982f7c233b ""
@@ -252,9 +253,9 @@
   "c:/texlive/2022/texmf-dist/web2c/texmf.cnf" 1677214975 40171 cdab547de63d26590bebb3baff566530 ""
   "c:/texlive/2022/texmf-var/web2c/eptex/platex.fmt" 1677225216 7915495 3436476ebf71511325a4588fc4c27618 ""
   "c:/texlive/2022/texmf.cnf" 1677225096 713 e69b156964470283e0530f5060668171 ""
-  "out/Capter2.aux" 1680060029 4003 3c72e976be6d5c081f433177ad23f63b "latex"
-  "out/Capter2.nav" 1680060029 2132 9ecbcfc9f7de68c052dc9846a033acac "latex"
-  "out/Capter2.out" 1680060026 0 d41d8cd98f00b204e9800998ecf8427e "latex"
+  "out/Capter2.aux" 1680076002 4003 3c72e976be6d5c081f433177ad23f63b "latex"
+  "out/Capter2.nav" 1680076002 2132 9ecbcfc9f7de68c052dc9846a033acac "latex"
+  "out/Capter2.out" 1680076000 0 d41d8cd98f00b204e9800998ecf8427e "latex"
   (generated)
   "out/Capter2.aux"
   "out/Capter2.dvi"
