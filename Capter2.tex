@@ -27,7 +27,7 @@
       \begin{center}
         \includegraphics[height=6cm]{./AI_ML_DL.png}
       \end{center} 
-      \caption{AIと機械学習とディープラーニングの関係}  
+      \caption{AIと機械学習とディープラーニングの関係性を表した図}  
     \end{figure}
     https://business.ntt-east.co.jp/content/cloudsolution/column-159.html
   \end{frame}
@@ -160,16 +160,21 @@
 
   \begin{frame}[t]{2.3 \ 統計入門 \\ \normalsize{2.3.1 \ 標本と推定}}
     \textbf{推定}を考える\\
+    推定における目標 $\cdots$ データの分析から母集団についての知識を獲得すること
     \begin{itemize}
-      \item 統計解析に用いるデータは母集団から無作為に抽出されたものとみなす
-      \item データの分析から母集団についての知識を獲得することが目標
-      \item 母集団の性質はデータ生成確率$P_{data}(\bm{x})$により特徴付けられているものとする(=不確定性のある現象を確率的にモデル化)
-      \item サンプル$\bm{x}$はデータ生成確率から抽出されたものであると仮定する
+      \item 推定における仮定
+      \begin{enumerate}
+        \item 統計解析に用いるデータは母集団から無作為に抽出されたものとみなす 
+        \item 母集団の性質は\textbf{データ生成確率}$P_{data}(\bm{x})$により特徴付けられているものとする\\
+        (=不確定性のある現象を確率的にモデル化)
+        \item サンプル$\bm{x}$はデータ生成確率から抽出されたものであると仮定する
+      \end{enumerate}
     \end{itemize}
+    ある変数$\mathrm{x}$の実現値$x$が分布$P(\mathrm{x})$から抽出されているということを以下のように表す
     \begin{equation*}
       \bm{x} \sim P_{data}(\bm{\mathrm{x}})
     \end{equation*}
-    $\rightarrow$ 現象を確率的に予測できるようになる
+    $\rightarrow$ このような仮定により我々は現象を確率的に予測できる
   \end{frame}
 
   \begin{frame}[t]{2.3 \ 統計入門 \\ \normalsize{2.3.1 \ 標本と推定}}
@@ -185,9 +190,8 @@
       \end{equation*}
       この2つの値が決まれば分布が具体的に決定される
     \end{exampleblock}
-    実際のデータ生成分布は無数のパラメータを持つ
-    $\rightarrow$ 良く近似できると期待できるモデル分布$P(\mathrm{X};\bm{\theta})$を仮定し，そのモデルのパラメータ$\bm{\theta}$の最適値$\bm{\theta}^*$をデータから推定する\\
-    $\rightarrow$ パラメトリックなアプローチ
+    実際のデータ生成分布は無数のパラメータを持つ\\
+    $\rightarrow$ 良く近似できると期待できるモデル分布$P(\mathrm{X};\bm{\theta})$を仮定し，そのモデルのパラメータ$\bm{\theta}$\\の最適値$\bm{\theta}^*$をデータから推定する(パラメトリックなアプローチ)
   \end{frame}
 
   \begin{frame}[t]{2.3 \ 統計入門 \\ \normalsize{2.3.2 \ 点推定}}
@@ -207,7 +211,6 @@
 
   \begin{frame}[t]{2.3 \ 統計入門 \\ \normalsize{2.3.2 \ 点推定}}
     良い推定量の作り方
-    \pause
     \begin{enumerate}
       \item バイアスが小さい \ \ バイアス$\cdots$推定量の期待値$E[\hat{\bm{\theta}}]$と真の値$\theta^*$の差
         \begin{equation*}
@@ -215,12 +218,10 @@
         \end{equation*}
         \textbf{不偏推定量} $\cdots$ バイアスがゼロのもの(望ましい推定量)\\
         \textbf{漸近不偏推定量} $\cdots$ データの数が増えるにつれゼロへ漸近するもの($\lim_{N \rightarrow \infty}b(\hat{\bm{\theta}})=0$)
-        \pause
       \item 分散が小さい(つまり，真の値に対して推定値のばらつきが小さい)
         \begin{equation*}
           Var(\hat{\bm{\theta}}) = E\left[\left(\hat{\bm{\theta}}-\bm{\theta}^*\right)^2\right]
         \end{equation*}
-        \pause
       \item 一致性がある\\
         データ点の数が増えるにつれて統計量が真のパラメータに近づいていくという性質\\
         \textbf{一致推定量} $\cdots$ $N \rightarrow \infty$に従い$\hat{\bm{\theta}} \rightarrow \bm{\theta}^*$となる推定量
