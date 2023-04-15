@@ -1,13 +1,14 @@
 # Fdb version 4
-["dvipdf"] 1681552135 "out/DL_Phys_sec4.2.dvi" "out/DL_Phys_sec4.2.pdf" "out/DL_Phys_sec4.2" 1681552136 0
-  "out/DL_Phys_sec4.2.dvi" 1681552135 46112 04749d6c50cb2961f480b8ea081e60de "latex"
+["dvipdf"] 1681563539 "out/DL_Phys_sec4.2.dvi" "out/DL_Phys_sec4.2.pdf" "out/DL_Phys_sec4.2" 1681563540 0
+  "out/DL_Phys_sec4.2.dvi" 1681563539 56212 35a472e0edb061bf91fe5e121f501100 "latex"
   (generated)
   "out/DL_Phys_sec4.2.pdf"
   (rewritten before read)
-["latex"] 1681552131 "c:/Users/sugay/Desktop/AI_seminar/ML_seminar/DL_Phys_sec4.2.tex" "out/DL_Phys_sec4.2.dvi" "DL_Phys_sec4.2" 1681552136 0
-  "DL_Phys_sec4.2.tex" 1681552131 8690 56bfb87e8a9bbdd799c738a43b222b8e ""
+["latex"] 1681563535 "c:/Users/sugay/Desktop/AI_seminar/ML_seminar/DL_Phys_sec4.2.tex" "out/DL_Phys_sec4.2.dvi" "DL_Phys_sec4.2" 1681563540 0
+  "DL_Phys_sec4.2.tex" 1681563531 10497 ecb3509b2682387e6cc5c6c5a4e3a49c ""
+  "RNN_diagram.jpeg" 1681559037 171967 730c208f2e9d3cf5739f5118c401b04c ""
   "apple_vector.jpeg" 1681528822 146695 ae72cd678f6ad534a41d9d2ea0aaa834 ""
-  "c:/Users/sugay/Desktop/AI_seminar/ML_seminar/DL_Phys_sec4.2.tex" 1681552131 8690 56bfb87e8a9bbdd799c738a43b222b8e ""
+  "c:/Users/sugay/Desktop/AI_seminar/ML_seminar/DL_Phys_sec4.2.tex" 1681563531 10497 ecb3509b2682387e6cc5c6c5a4e3a49c ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1677218410 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1677222352 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth9.tfm" 1677222352 1196 b274fc006918dea9e5263e2117f4bddb ""
@@ -245,9 +246,9 @@
   "c:/texlive/2022/texmf-dist/web2c/texmf.cnf" 1677214975 40171 cdab547de63d26590bebb3baff566530 ""
   "c:/texlive/2022/texmf-var/web2c/eptex/platex.fmt" 1677225216 7915495 3436476ebf71511325a4588fc4c27618 ""
   "c:/texlive/2022/texmf.cnf" 1677225096 713 e69b156964470283e0530f5060668171 ""
-  "out/DL_Phys_sec4.2.aux" 1681552135 2639 29644223f83a2ba7694eba62f0a88c45 "latex"
-  "out/DL_Phys_sec4.2.nav" 1681552135 1202 a971439ba5eedf62b158aa4c3f07763d "latex"
-  "out/DL_Phys_sec4.2.out" 1681552133 0 d41d8cd98f00b204e9800998ecf8427e "latex"
+  "out/DL_Phys_sec4.2.aux" 1681563539 3259 2ea7504b2c3c111aa13ef68a214bda1c "latex"
+  "out/DL_Phys_sec4.2.nav" 1681563539 1574 f5abf7444d939a8c2cd188b6df8c9c87 "latex"
+  "out/DL_Phys_sec4.2.out" 1681563537 0 d41d8cd98f00b204e9800998ecf8427e "latex"
   "simple_RNN.png" 1681541912 25389 d287c300314e1398559d6d3a0282f5e8 ""
   (generated)
   "out/DL_Phys_sec4.2.aux"

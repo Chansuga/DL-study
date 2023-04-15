@@ -1572,6 +1572,10 @@ INPUT extractbb -B cropbox -O simple_RNN.png
 INPUT ./simple_RNN.png
 INPUT ./simple_RNN.png
 INPUT simple_RNN.png
+INPUT ./RNN_diagram.jpeg
+INPUT ./RNN_diagram.jpeg
+INPUT RNN_diagram.jpeg
+INPUT extractbb -B cropbox -O RNN_diagram.jpeg
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm

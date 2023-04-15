@@ -2,6 +2,7 @@
 
 
 \usepackage{here, amsmath, latexsym, amssymb, bm, ascmac, mathtools, multicol, tcolorbox, subfig, color, tikz, graphics, braket}
+\renewcommand{\baselinestretch}{1.2}
 \renewcommand{\figurename}{図}
 \renewcommand{\tablename}{表}
 \renewcommand{\kanjifamilydefault}{\gtdefault}
@@ -80,39 +81,22 @@
     \end{figure}
   \end{frame}
 
-  \begin{frame}[t]{再帰的ニューラルネットワーク(RNN)の考え方}
-    \begin{columns}
-      \begin{column}{0.5\textwidth}
-        \begin{align*}
-          h(1) &= \sigma_{\bullet}(J(1)x(1))\\
-          h(2) &= \sigma_{\bullet}(J(2)x(2) + J_{h(1)}h(1))\\
-          \vdots\\
-          h(t) &= \sigma_{\bullet}(J(t)x(t) + J_{h(t-1)}h(t-1))
-        \end{align*}
-        右のブラケット表記を用いると
-        \begin{align*}
-          \ket{h(t)} &= \sigma_{\bullet}(J(t)\ket{x(t)} + J_{h(t-1)}\ket{h(t-1)})\\
-          &= \sigma_{\bullet}\sum_{m}\ket{m}(\bra{m}J(t)\ket{x(t)} \\
-          &+ \bra{m}J_{h(t-1)}\ket{h(t-1)})
-        \end{align*}
-      \end{column}
-      \begin{column}{0.5\textwidth}
-        \begin{figure}
-          \begin{center}
-            \includegraphics[height=2.6cm]{simple_RNN.png}
-          \end{center} 
-        \end{figure}
-        \begin{align*}
-          \ket{x(t)} &= (x(1),x(2),\cdots,x(T))^{\top}\\
-          \ket{h(t)} &= (h(1),h(2),\cdots,h(T))^{\top}\\
-          \mathbb{J}_x &= \text{diag}(J_{x(1)},J_{x(2)},\cdots,J_{x(T)})\\
-          \mathbb{J}_h &= \text{diag}(J_{h(1)},J_{h(2)},\cdots,J_{h(T)})
-        \end{align*}
-      \end{column}
-    \end{columns}
+  \begin{frame}{再帰的ニューラルネットワーク(RNN)の考え方}
+    \begin{figure}
+      \begin{center}
+        \includegraphics[height=4cm]{simple_RNN.png}
+      \end{center} 
+    \end{figure}
+    以下のようにベクトルや行列で表現しておく
+    \begin{align*}
+      \ket{x(t)} &= (x(1),x(2),\cdots,x(T))^{\top}\\
+      \ket{h(t)} &= (h(1),h(2),\cdots,h(T))^{\top}\\
+      \mathbb{J}_x &= \text{diag}(J_{x(1)},J_{x(2)},\cdots,J_{x(T)})\\
+      \mathbb{J}_h &= \text{diag}(J_{h(1)},J_{h(2)},\cdots,J_{h(T)})
+    \end{align*}
   \end{frame}
 
-  \begin{frame}[t]{再帰的ニューラルネットワーク(RNN)の考え方}
+  \begin{frame}{再帰的ニューラルネットワーク(RNN)の考え方}
     各時刻での出力は以下のように簡単に求められる
     \begin{align*}
       h(1) &= \sigma_{\bullet}(J_{x(1)}x(1))\\
@@ -127,10 +111,24 @@
     \end{align*}
   \end{frame}
 
+  \begin{frame}{再帰的ニューラルネットワーク(RNN)の考え方}
+    「ループ」のような構造(=再帰的)を持つニューラルネットワーク\\
+    $\Rightarrow$ 再帰的ニューラルネットワーク
+    \begin{figure}
+      \begin{center}
+        \includegraphics[height=3.5cm]{RNN_diagram.jpeg}
+      \end{center}
+      \caption{素朴な再帰的ニューラルネットワークの模式図} 
+    \end{figure}
+    \begin{equation*}
+      \ket{h(t)} = \sum_{m}\ket{m}\sigma_{\bullet}\Big(\bra{m}\mathbb{J}_x\ket{x(t)} + \bra{m}\mathbb{J}_h\ket{h(t-1)}\Big)
+    \end{equation*}
+  \end{frame}
+
   \begin{frame}{RNNにおける誤差逆伝播}
     誤差関数$L$は典型的に以下のようになっているとする
     \begin{equation*}
-      L = \braket{d(1)|h(1)} + \braket{d(2)|h(2)} + \cdots + \braket{d(T)|h(T)}= \sum_{t=1}^{T}\braket{d(t)|h(t)}
+      L = \braket{d(1)|h(1)} + \braket{d(2)|h(2)} + \cdots + \braket{d(T)|h(T)}= \sum_{t}\braket{d(t)|h(t)}
     \end{equation*}
     $t$番目の変化量に着目\hyperlink{計算1}{(\text{計算↓})}
     \begin{align*}
@@ -164,29 +162,63 @@
     以上の結果から誤差関数$L$の変化量は
     \begin{align*}
       \delta L 
-      &= \sum_{t=1}^{T}\delta\braket{d(t)|h(t)}\\
-      &= \sum_{m,n} \Big( \sum_{t=1}^{T}\sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|x(\tau)}\delta J_x^{mn}\\
-      &\hspace{0.8cm}+ \sum_{t=1}^{T}\sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|h(\tau-1)}\delta J_h^{mn} \Big)
+      &= \sum_{t}\delta\braket{d(t)|h(t)}\\
+      &= \sum_{m,n} \Big( \sum_{t}\sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|x(\tau)}\delta J_x^{mn}\\
+      &\hspace{0.8cm}+ \sum_{t}\sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|h(\tau-1)}\delta J_h^{mn} \Big)
     \end{align*}
     と表すことができる．この結果より，パラメータ$J_x^{mn}$と$J_h^{mn}$はそれぞれ
     \begin{align*}
-      \delta J_x^{mn} &= -\epsilon \sum_{t=1}^{T}\sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|x(\tau)}\\
-      \delta J_h^{mn} &= -\epsilon \sum_{t=1}^{T}\sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|h(\tau-1)}
+      \delta J_x^{mn} &= -\epsilon \sum_{t}\sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|x(\tau)}\\
+      \delta J_h^{mn} &= -\epsilon \sum_{t}\sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|h(\tau-1)}
     \end{align*}
     という更新ルールにすれば，誤差関数の値が小さくなるようになる．
   \end{frame}
 
+  \begin{frame}{RNNにおける誤差逆伝播}
+    (check)
+    \begin{align*}
+      &\delta L = -\epsilon \sum_{n,m} \\
+      &\times \underbrace{\Big[ \Big( \sum_t \sum_{\tau \leq t} \braket{\delta_t(\tau)|m}\braket{n|x(\tau)} \Big)^2 + \Big( \sum_t \sum_{\tau \leq t} \braket{\delta_t(\tau)|m}\braket{n|h(\tau-1)} \Big)^2 \Big]}_{>0}\\
+      &<0
+    \end{align*}
+    今回の場合，逆伝播の式は以下
+    \begin{align*}
+      \bra{\delta_t (\tau-1)} &= \bra{\delta_t (\tau)}\mathbb{J}_h \mathbb{G}(\tau-1)\\
+      \bra{\delta_t (t)} &= \bra{d(t)}\mathbb{G}(t)
+    \end{align*}
+  \end{frame}
 
+  \begin{frame}{勾配爆発/勾配消失}
+    ここで考えた再帰的ニューラルネットワークでは勾配爆発か勾配消失のどちらかが起こってしまい，うまく学習することができないという問題がある．\\
+    \vspace{0.3cm}
+    逆伝播のより
+    \begin{align*}
+      \bra{\delta_t (1)}
+      &= \bra{\delta_t (2)}\mathbb{J}_h \mathbb{G}(1) = \bra{\delta_t (3)} \mathbb{J}_h \mathbb{G}(2) \mathbb{J}_h \mathbb{G}(1)\\
+      &= \cdots\\
+      &= \bra{d(T)}\mathbb{G}(T) \mathbb{J}_h \mathbb{G}(T-1) \cdots \mathbb{J}_h \mathbb{G}(2) \mathbb{J}_h \mathbb{G}(1)
+    \end{align*}
+    $\Rightarrow$ $\mathbb{J}_h$が右から$T-1$回右から作用することになる\\
+    \vspace{0.3cm}
+    文章データを扱うのであれば$T$は文章の単語数などに対応する\\
+    $\rightarrow$1000単語ある文章を学習するとなるとがほぼ1000回かかることになる
+  \end{frame}
 
+  \begin{frame}{勾配爆発/勾配消失}
+    \begin{align*}
+      |\mathbb{J}_h| &> 1 : \bra{\delta_t(1)}\text{が巨大すぎる}\\
+      |\mathbb{J}_h| &< 1 : \bra{\delta_t(1)}\text{が小さすぎる}
+    \end{align*}
+  \end{frame}
 
 
   \begin{frame}[label=計算1]{$\delta\ket{h(t)}$の計算}
     パラメータに依存するのは$\mathbb{J}_{x,h}$と$\ket{h(t-1)}$なので
     \begin{align*}
-      \delta \ket{h(t)} &= \underbrace{\sum_{m}\ket{m}\sigma'_{\bullet}\Big(\bra{m}\mathbb{J}_{x}\ket{x(t)} + \bra{m}\mathbb{J}_{h}\ket{h(t-1)}\Big)\bra{m}}_{\eqcolon \bm{G}(t)}\\
+      \delta \ket{h(t)} &= \underbrace{\sum_{m}\ket{m}\sigma'_{\bullet}\Big(\bra{m}\mathbb{J}_{x}\ket{x(t)} + \bra{m}\mathbb{J}_{h}\ket{h(t-1)}\Big)\bra{m}}_{\eqcolon \mathbb{G}(t)}\\
       &\times \delta \Big(\mathbb{J}_x\ket{x(t)} + \mathbb{J}_{h}\ket{h(t-1)}\Big)\\
-      &= \bm{G}(t)\Big( \delta \mathbb{J}_x \ket{x(t)} + \delta \mathbb{J}_{h}\ket{h(t-1)} + \mathbb{J}_{h}\delta\ket{h(t-1)} \Big)\\
-      &= \bm{G}(t)\delta \mathbb{J}_x \ket{x(t)} + \bm{G}(t)\delta\mathbb{J}_h\ket{h(t-1)} + \bm{G}(t)\mathbb{J}_h \delta \ket{h(t-1)}
+      &= \mathbb{G}(t)\Big( \delta \mathbb{J}_x \ket{x(t)} + \delta \mathbb{J}_{h}\ket{h(t-1)} + \mathbb{J}_{h}\delta\ket{h(t-1)} \Big)\\
+      &= \mathbb{G}(t)\delta \mathbb{J}_x \ket{x(t)} + \mathbb{G}(t)\delta\mathbb{J}_h\ket{h(t-1)} + \mathbb{G}(t)\mathbb{J}_h \delta \ket{h(t-1)}
     \end{align*}
   \end{frame}
 
