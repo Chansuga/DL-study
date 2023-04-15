@@ -1,0 +1,194 @@
+\documentclass[dvipdfmx,10pt]{beamer}
+
+
+\usepackage{here, amsmath, latexsym, amssymb, bm, ascmac, mathtools, multicol, tcolorbox, subfig, color, tikz, graphics, braket}
+\renewcommand{\figurename}{図}
+\renewcommand{\tablename}{表}
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+
+\usetheme{Boadilla}
+
+\title{ディープラーニングと物理学}
+\subtitle{4.2 \ 再帰的ニューラルネットワークと誤差逆伝播法}
+\author[須賀]{須賀勇貴}
+\institute[茨大]{茨城大学大学院 \ 理工学研究科 \ 量子線科学専攻 \ 2年}
+\date{\today}
+
+\begin{document}
+
+\frame{\maketitle}
+
+  \begin{frame}{時系列データについて}
+    \begin{block}{系列データ}
+      個々の要素が順序付きの集まりとして与えられるデータのこと\\
+      (ex) 
+      \begin{itemize}
+        \item 動画データ $\rightarrow$ 順序付きの自然画像データ
+        \item 文章データ $\rightarrow$ 順序付きの文字画像データ
+        \item 会話データ $\rightarrow$ 順序付きの音声データ
+      \end{itemize}
+    \end{block}
+    長さが$T$の系列データは以下のように表現できる
+      \begin{equation*}
+        \begin{pmatrix*}
+          x(1) \\ x(2) \\ x(3) \\ \vdots \\ x(T)
+        \end{pmatrix*}
+        =\ket{x(t)} \ \ (t=1,2,3,\cdots,T)
+      \end{equation*}  
+  \end{frame}
+
+  \begin{frame}{時系列データについて}
+    (ex) "This is an apple ."という文章データを系列データとして扱う場合
+    \begin{align*}
+      \ket{x(1)} &= \ket{\text{This}}\\
+      \ket{x(2)} &= \ket{\text{is}}\\
+      \ket{x(3)} &= \ket{\text{an}}\\
+      \ket{x(4)} &= \ket{\text{apple}}\\
+      \ket{x(5)} &= \ket{\text{.}}
+    \end{align*}
+    文字データなどは\textbf{1-of-Kベクトル}などにより数値ベクトルとして表現される
+    \begin{figure}
+      \begin{center}
+        \includegraphics[height=2cm]{apple_vector.jpeg}
+      \end{center} 
+      \caption{"apple"の1-of-kベクトル表示}  
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{再帰的ニューラルネットワーク(RNN)の考え方}
+    これまで、扱ってきたデータはデータ間につながりがないものだった
+    \begin{center}
+      $\Downarrow$
+    \end{center}
+    系列データをニューラルネットワークで扱えるようにしたい\\
+    \begin{center}
+      $\Downarrow$
+    \end{center}
+    データ間のつながりを表現できるようなニューラルネットワークを構築すればよい！
+  \end{frame}
+
+  \begin{frame}{再帰的ニューラルネットワーク(RNN)の考え方}
+    素朴な考え方\\
+    $\Rightarrow$前の時刻の出力を次の時刻の入力に加えるようなニューラルネットワーク
+    \begin{figure}
+      \begin{center}
+        \includegraphics[height=5.2cm]{simple_RNN.png}
+      \end{center} 
+      \caption{最もシンプルな形のRNN}  
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}[t]{再帰的ニューラルネットワーク(RNN)の考え方}
+    \begin{columns}
+      \begin{column}{0.5\textwidth}
+        \begin{align*}
+          h(1) &= \sigma_{\bullet}(J(1)x(1))\\
+          h(2) &= \sigma_{\bullet}(J(2)x(2) + J_{h(1)}h(1))\\
+          \vdots\\
+          h(t) &= \sigma_{\bullet}(J(t)x(t) + J_{h(t-1)}h(t-1))
+        \end{align*}
+        右のブラケット表記を用いると
+        \begin{align*}
+          \ket{h(t)} &= \sigma_{\bullet}(J(t)\ket{x(t)} + J_{h(t-1)}\ket{h(t-1)})\\
+          &= \sigma_{\bullet}\sum_{m}\ket{m}(\bra{m}J(t)\ket{x(t)} \\
+          &+ \bra{m}J_{h(t-1)}\ket{h(t-1)})
+        \end{align*}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{figure}
+          \begin{center}
+            \includegraphics[height=2.6cm]{simple_RNN.png}
+          \end{center} 
+        \end{figure}
+        \begin{align*}
+          \ket{x(t)} &= (x(1),x(2),\cdots,x(T))^{\top}\\
+          \ket{h(t)} &= (h(1),h(2),\cdots,h(T))^{\top}\\
+          \mathbb{J}_x &= \text{diag}(J_{x(1)},J_{x(2)},\cdots,J_{x(T)})\\
+          \mathbb{J}_h &= \text{diag}(J_{h(1)},J_{h(2)},\cdots,J_{h(T)})
+        \end{align*}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}[t]{再帰的ニューラルネットワーク(RNN)の考え方}
+    各時刻での出力は以下のように簡単に求められる
+    \begin{align*}
+      h(1) &= \sigma_{\bullet}(J_{x(1)}x(1))\\
+      h(2) &= \sigma_{\bullet}(J_{x(2)}x(2) + J_{h(1)}h(1))\\
+      \vdots\\
+      h(t) &= \sigma_{\bullet}(J_{x(t)}(t)x(t) + J_{h(t-1)}h(t-1))
+    \end{align*}
+    ブラケット表記より，まとめて以下のように書ける
+    \begin{align*}
+      \ket{h(t)} &= \sigma_{\bullet}(\mathbb{J}_x\ket{x(t)} + \mathbb{J}_h\ket{h(t-1)})\\
+      &= \sum_{m}\ket{m}\sigma_{\bullet}\Big(\bra{m}\mathbb{J}_x\ket{x(t)} + \bra{m}\mathbb{J}_h\ket{h(t-1)}\Big)
+    \end{align*}
+  \end{frame}
+
+  \begin{frame}{RNNにおける誤差逆伝播}
+    誤差関数$L$は典型的に以下のようになっているとする
+    \begin{equation*}
+      L = \braket{d(1)|h(1)} + \braket{d(2)|h(2)} + \cdots + \braket{d(T)|h(T)}= \sum_{t=1}^{T}\braket{d(t)|h(t)}
+    \end{equation*}
+    $t$番目の変化量に着目\hyperlink{計算1}{(\text{計算↓})}
+    \begin{align*}
+      \delta \braket{d(t)|h(t)} 
+      &= \bra{d(t)} \delta \ket{h(t)} \ \\
+      &= \cdots\\
+      &= \bra{\delta_t (t)}\delta \mathbb{J}_x \ket{x(t)} + \bra{\delta_t (t)}\delta \mathbb{J}_h \ket{h(t-1)}\\
+      &+ \bra{\delta_t (t-1)}\delta \mathbb{J}_x \ket{x(t-1)} + \bra{\delta_t (t-1)}\delta \mathbb{J}_h \ket{h(t-2)}\\
+      &+ \cdots\\
+      &+ \bra{\delta_t (1)}\delta \mathbb{J}_x \ket{x(1)} + \bra{\delta_t (1)}\delta \mathbb{J}_h \ket{h(0)}\\
+      &= \sum_{\tau \leq t} \Big(\bra{\delta_t (\tau)}\delta \mathbb{J}_x \ket{x(\tau)} + \bra{\delta_t (\tau)}\delta \mathbb{J}_h \ket{h(\tau-1)} \Big)
+    \end{align*}
+    
+  \end{frame}
+
+  \begin{frame}{RNNにおける誤差逆伝播}
+    ここで，
+    \begin{equation*}
+      \delta \mathbb{J} = \sum_{m,n} \ket{m}\bra{n}\delta J~{mn}
+    \end{equation*}
+    とすると
+    \begin{align*}
+      &\delta \braket{d(t)|h(t)} \\
+      &= \sum_{\tau \leq t} \Big(\bra{\delta_t (\tau)}\delta \mathbb{J}_x \ket{x(\tau)} + \bra{\delta_t (\tau)}\delta \mathbb{J}_h \ket{h(\tau-1)} \Big)\\
+      &= \sum_{\tau \leq t} \sum_{m,n} \Big( \braket{\delta_t (\tau)|m} \braket{n|x(\tau)}\delta J_x^{mn} + \braket{\delta_t (\tau)|m} \braket{n|h(\tau-1)}\delta J_h^{mn} \Big)\\
+      &= \sum_{m,n} \Big( \sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|x(\tau)}\delta J_x^{mn} + \sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|h(\tau-1)}\delta J_h^{mn} \Big)
+    \end{align*}
+  \end{frame}
+
+  \begin{frame}{RNNにおける誤差逆伝播}
+    以上の結果から誤差関数$L$の変化量は
+    \begin{align*}
+      \delta L 
+      &= \sum_{t=1}^{T}\delta\braket{d(t)|h(t)}\\
+      &= \sum_{m,n} \Big( \sum_{t=1}^{T}\sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|x(\tau)}\delta J_x^{mn}\\
+      &\hspace{0.8cm}+ \sum_{t=1}^{T}\sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|h(\tau-1)}\delta J_h^{mn} \Big)
+    \end{align*}
+    と表すことができる．この結果より，パラメータ$J_x^{mn}$と$J_h^{mn}$はそれぞれ
+    \begin{align*}
+      \delta J_x^{mn} &= -\epsilon \sum_{t=1}^{T}\sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|x(\tau)}\\
+      \delta J_h^{mn} &= -\epsilon \sum_{t=1}^{T}\sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|h(\tau-1)}
+    \end{align*}
+    という更新ルールにすれば，誤差関数の値が小さくなるようになる．
+  \end{frame}
+
+
+
+
+
+  \begin{frame}[label=計算1]{$\delta\ket{h(t)}$の計算}
+    パラメータに依存するのは$\mathbb{J}_{x,h}$と$\ket{h(t-1)}$なので
+    \begin{align*}
+      \delta \ket{h(t)} &= \underbrace{\sum_{m}\ket{m}\sigma'_{\bullet}\Big(\bra{m}\mathbb{J}_{x}\ket{x(t)} + \bra{m}\mathbb{J}_{h}\ket{h(t-1)}\Big)\bra{m}}_{\eqcolon \bm{G}(t)}\\
+      &\times \delta \Big(\mathbb{J}_x\ket{x(t)} + \mathbb{J}_{h}\ket{h(t-1)}\Big)\\
+      &= \bm{G}(t)\Big( \delta \mathbb{J}_x \ket{x(t)} + \delta \mathbb{J}_{h}\ket{h(t-1)} + \mathbb{J}_{h}\delta\ket{h(t-1)} \Big)\\
+      &= \bm{G}(t)\delta \mathbb{J}_x \ket{x(t)} + \bm{G}(t)\delta\mathbb{J}_h\ket{h(t-1)} + \bm{G}(t)\mathbb{J}_h \delta \ket{h(t-1)}
+    \end{align*}
+  \end{frame}
+
+
+\end{document}
