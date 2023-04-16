@@ -2,6 +2,7 @@
 
 
 \usepackage{here, amsmath, latexsym, amssymb, bm, ascmac, mathtools, multicol, tcolorbox, subfig, color, tikz, graphics, braket}
+\usepackage{pxjahyper}%しおりの文字化けを防ぐ
 \renewcommand{\baselinestretch}{1.2}
 \renewcommand{\figurename}{図}
 \renewcommand{\tablename}{表}
@@ -21,6 +22,11 @@
 
 \frame{\maketitle}
 
+  \begin{frame}{目次}
+    \tableofcontents  %% <- このコマンド1つで自動的に目次のページが作成されます.
+  \end{frame}
+
+  \section{時系列データについて}
   \begin{frame}{時系列データについて}
     \begin{block}{系列データ}
       個々の要素が順序付きの集まりとして与えられるデータのこと\\
@@ -58,6 +64,7 @@
     \end{figure}
   \end{frame}
 
+  \section{再帰的ニューラルネットワーク(RNN)の考え方}
   \begin{frame}{再帰的ニューラルネットワーク(RNN)の考え方}
     これまで、扱ってきたデータはデータ間につながりがないものだった
     \begin{center}
@@ -89,10 +96,10 @@
     \end{figure}
     以下のようにベクトルや行列で表現しておく
     \begin{align*}
-      \ket{x(t)} &= (x(1),x(2),\cdots,x(T))^{\top}\\
-      \ket{h(t)} &= (h(1),h(2),\cdots,h(T))^{\top}\\
-      \mathbb{J}_x &= \text{diag}(J_{x(1)},J_{x(2)},\cdots,J_{x(T)})\\
-      \mathbb{J}_h &= \text{diag}(J_{h(1)},J_{h(2)},\cdots,J_{h(T)})
+      &\ket{x(t)} = (x(1),x(2),\cdots,x(T))^{\top}\\
+      &\ket{h(t)} = (h(1),h(2),\cdots,h(T))^{\top}\\
+      &\mathbb{J}_x = \text{diag}(J_{x(1)},J_{x(2)},\cdots,J_{x(T)})\\
+      &\mathbb{J}_h = \text{diag}(J_{h(1)},J_{h(2)},\cdots,J_{h(T)})
     \end{align*}
   \end{frame}
 
@@ -125,7 +132,8 @@
     \end{equation*}
   \end{frame}
 
-  \begin{frame}{RNNにおける誤差逆伝播}
+  \section{RNNにおける誤差逆伝播}
+  \begin{frame}[label=back]{RNNにおける誤差逆伝播}
     誤差関数$L$は典型的に以下のようになっているとする
     \begin{equation*}
       L = \braket{d(1)|h(1)} + \braket{d(2)|h(2)} + \cdots + \braket{d(T)|h(T)}= \sum_{t}\braket{d(t)|h(t)}
@@ -141,7 +149,6 @@
       &+ \bra{\delta_t (1)}\delta \mathbb{J}_x \ket{x(1)} + \bra{\delta_t (1)}\delta \mathbb{J}_h \ket{h(0)}\\
       &= \sum_{\tau \leq t} \Big(\bra{\delta_t (\tau)}\delta \mathbb{J}_x \ket{x(\tau)} + \bra{\delta_t (\tau)}\delta \mathbb{J}_h \ket{h(\tau-1)} \Big)
     \end{align*}
-    
   \end{frame}
 
   \begin{frame}{RNNにおける誤差逆伝播}
@@ -151,8 +158,7 @@
     \end{equation*}
     とすると
     \begin{align*}
-      &\delta \braket{d(t)|h(t)} \\
-      &= \sum_{\tau \leq t} \Big(\bra{\delta_t (\tau)}\delta \mathbb{J}_x \ket{x(\tau)} + \bra{\delta_t (\tau)}\delta \mathbb{J}_h \ket{h(\tau-1)} \Big)\\
+      &\delta \braket{d(t)|h(t)} = \sum_{\tau \leq t} \Big(\bra{\delta_t (\tau)}\delta \mathbb{J}_x \ket{x(\tau)} + \bra{\delta_t (\tau)}\delta \mathbb{J}_h \ket{h(\tau-1)} \Big)\\
       &= \sum_{\tau \leq t} \sum_{m,n} \Big( \braket{\delta_t (\tau)|m} \braket{n|x(\tau)}\delta J_x^{mn} + \braket{\delta_t (\tau)|m} \braket{n|h(\tau-1)}\delta J_h^{mn} \Big)\\
       &= \sum_{m,n} \Big( \sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|x(\tau)}\delta J_x^{mn} + \sum_{\tau \leq t} \braket{\delta_t (\tau)|m} \braket{n|h(\tau-1)}\delta J_h^{mn} \Big)
     \end{align*}
@@ -188,6 +194,7 @@
     \end{align*}
   \end{frame}
 
+  \section{勾配爆発/勾配消失}
   \begin{frame}{勾配爆発/勾配消失}
     ここで考えた再帰的ニューラルネットワークでは勾配爆発か勾配消失のどちらかが起こってしまい，うまく学習することができないという問題がある．\\
     \vspace{0.3cm}
@@ -201,14 +208,24 @@
     $\Rightarrow$ $\mathbb{J}_h$が右から$T-1$回右から作用することになる\\
     \vspace{0.3cm}
     文章データを扱うのであれば$T$は文章の単語数などに対応する\\
-    $\rightarrow$1000単語ある文章を学習するとなるとがほぼ1000回かかることになる
+    $\Rightarrow$1000単語ある文章を学習するとなると$\mathbb{J}_h$がほぼ1000回かかることになる
   \end{frame}
 
   \begin{frame}{勾配爆発/勾配消失}
+    \begin{equation*}
+      \bra{\delta_t (1)} 
+      = \bra{d(T)}\mathbb{G}(T) \underline{\mathbb{J}_h} \mathbb{G}(T-1) \cdots \underline{\mathbb{J}_h} \mathbb{G}(2) \underline{\mathbb{J}_h} \mathbb{G}(1)
+    \end{equation*}
+
     \begin{align*}
-      |\mathbb{J}_h| &> 1 : \bra{\delta_t(1)}\text{が巨大すぎる}\\
-      |\mathbb{J}_h| &< 1 : \bra{\delta_t(1)}\text{が小さすぎる}
+      |\mathbb{J}_h| &> 1 : \bra{\delta_t(1)}\text{が巨大すぎる}\Rightarrow \text{勾配爆発}\\
+      |\mathbb{J}_h| &< 1 : \bra{\delta_t(1)}\text{が小さすぎる}\Rightarrow \text{勾配消失}
     \end{align*}
+    勾配爆発はなぜいけないのか$\cdots$\\
+    パラメータの更新量が大きくなることになるので適切な極値を見つけられなくなる(更新量はある程度小さい値でなければならない)\\
+    \vspace{0.3cm}
+    勾配消失はなぜいけないのか$\cdots$\\
+    勾配がほぼ0になってしまうと，パラメータが更新されないということになってしまう(=記憶の忘却)
   \end{frame}
 
 
@@ -220,6 +237,7 @@
       &= \mathbb{G}(t)\Big( \delta \mathbb{J}_x \ket{x(t)} + \delta \mathbb{J}_{h}\ket{h(t-1)} + \mathbb{J}_{h}\delta\ket{h(t-1)} \Big)\\
       &= \mathbb{G}(t)\delta \mathbb{J}_x \ket{x(t)} + \mathbb{G}(t)\delta\mathbb{J}_h\ket{h(t-1)} + \mathbb{G}(t)\mathbb{J}_h \delta \ket{h(t-1)}
     \end{align*}
+    \hyperlink{back}{(\text{戻る})}
   \end{frame}
 
 
