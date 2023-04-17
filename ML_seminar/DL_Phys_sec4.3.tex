@@ -29,7 +29,7 @@
     \end{block}
     \begin{figure}
       \begin{center}
-        \includegraphics[height=5.7cm]{LSTM_diagram.jpeg}
+        \includegraphics[height=5.7cm]{image/LSTM_diagram.jpeg}
       \end{center}
       \caption{LSTMの模式図．$\oplus$はベクトルの和，$\odot$はアダマール積を表す}
     \end{figure}
@@ -83,10 +83,28 @@
       \delta{h(t)} = \sum_{m}\Big[ \bra{m}\underbrace{\delta\ket{g_o}}_{\text{(A)}}\braket{m|\tanh{(c(t))}} + \braket{m|g_o}\bra{m}\underbrace{\delta \ket{\tanh{(c(t))}}}_{\text{(B)}} \Big]
     \end{equation*}
     次に，(B)について
+    \begin{equation*}
+      (B) = \delta\sum_{m}\ket{m}\tanh{(\braket{m|c(t)})} = \sum_{m}\ket{m}\tanh'{(\bullet)}\Big[ \bra{m}\underbrace{\delta\ket{c(t)}}_{\text{(C)}}  \Big]
+    \end{equation*}
+    勾配の大きさは(C)で決まる．計算すると
     \begin{align*}
-      (B) &= \delta\sum_{m}\ket{m}\tanh{(\braket{m|c(t)})}\\
-      &= \sum_{m}\ket{m}\tanh'{(\bullet)}\Big[ \bra{m}\underbrace{\delta\ket{c(t)}}_{\text{(C)}}  \Big]
+      \text{(C)} 
+      &= \sum_{m} \ket{m} \Big[ \bra{m}\delta\ket{c(t-1)}\braket{m|g_f} + \braket{m|c(t-1)}\bra{m}\underbrace{\delta\ket{g_f}}_{\text{(D)}} \Big]\\
+      &+ \sum_{m} \ket{m}\Big[ \tanh'{(\bullet)}\Big( \bra{m}\delta\mathbb{J}_x\ket{x(t)} + \bra{m}\delta\mathbb{J}_h\ket{h(t-1)} + \bra{m}\mathbb{J}_h \delta\ket{h(t-1)} \Big)\braket{m|g_i}\\
+      &+ \tanh{(\bullet)}\bra{m}\underbrace{\delta\ket{g_i}}_{\text{(F)}} \Big]
     \end{align*}
+  \end{frame}
+
+  \begin{frame}{(C)計算}
+    \begin{align*}
+      \text{(C)} 
+      &= \delta\sum_{m}\ket{m}\braket{m|c(t-1)}\braket{m|g_f}\\
+      &+ \delta\sum_m \ket{m}\tanh{\Big( \bra{m}\mathbb{J}_x \ket{x(t)} + \bra{m}\mathbb{J}_h \ket{h(t-1)} \Big)}\braket{m|g_i}\\ 
+      &= \sum_{m} \ket{m} \Big[ \bra{m}\delta\ket{c(t-1)}\braket{m|g_f} + \braket{m|c(t-1)}\bra{m}\underbrace{\delta\ket{g_f}}_{\text{(D)}} \Big]\\
+      &+ \sum_{m} \ket{m}\Big[ \tanh'{(\bullet)}\Big( \bra{m}\delta\mathbb{J}_x\ket{x(t)} + \bra{m}\delta\mathbb{J}_h\ket{h(t-1)} + \bra{m}\mathbb{J}_h \delta\ket{h(t-1)} \Big)\braket{m|g_i}\\
+      &+ \tanh{(\bullet)}\bra{m}\underbrace{\delta\ket{g_i}}_{\text{(F)}} \Big]
+    \end{align*}
+    
   \end{frame}
 
 
