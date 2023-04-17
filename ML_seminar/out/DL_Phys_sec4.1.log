@@ -1,10 +1,10 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2023.2.24)  17 APR 2023 22:01
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2023.2.24)  17 APR 2023 22:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/sugay/Desktop/AI_seminar/ML_seminar/DL_Phys_sec4.2.tex
-(c:/Users/sugay/Desktop/AI_seminar/ML_seminar/DL_Phys_sec4.2.tex
+**c:/Users/sugay/Desktop/AI_seminar/ML_seminar/DL_Phys_sec4.1.tex
+(c:/Users/sugay/Desktop/AI_seminar/ML_seminar/DL_Phys_sec4.1.tex
 pLaTeX2e <2023-02-14> (based on LaTeX2e <2022-11-01> patch level 1)
 L3 programming layer <2023-02-07> (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2023/02/20 v3.69 A class for typesetting presentations
@@ -126,8 +126,8 @@ Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 \pgfmath@stack@operation=\toks25
 ) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count284
-))) (c:/texlive/2022/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+))) (c:/texlive/2022/texmf-dist/tex/latex/extsizes/size8.clo
+File: size8.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
 ) (c:/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
@@ -792,44 +792,44 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@expandcount=\count371
 (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (c:/texlive/2022/texmf-dist/tex/latex/braket/braket.sty) (c:/texlive/2022/texmf-dist/tex/platex/pxjahyper/pxjahyper.sty
+))) (c:/texlive/2022/texmf-dist/tex/platex/pxjahyper/pxjahyper.sty
 Package: pxjahyper 2022/10/19 v1.2a
 (c:/texlive/2022/texmf-dist/tex/platex/pxjahyper/pxjahyper-enc.sty
 Package: pxjahyper-enc 2022/10/19 v1.2a
 ) (c:/texlive/2022/texmf-dist/tex/latex/bxjatoucs/bxjatoucs.sty
 Package: bxjatoucs 2019/10/20 v0.2
-)) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemeBoadilla.sty (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemerose.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemedolphin.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty)) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
+)) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemeBoadilla.sty (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemerose.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemedolphin.sty) (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty)) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
 File: l3backend-dvipdfmx.def 2023-01-16 L3 backend support: dvipdfmx
 \g__graphics_track_int=\count372
 \l__pdf_internal_box=\box164
 \g__pdf_backend_object_int=\count373
 \g__pdf_backend_annotation_int=\count374
 \g__pdf_backend_link_int=\count375
-) (out/DL_Phys_sec4.2.aux)
-\openout1 = `DL_Phys_sec4.2.aux'.
+) (out/DL_Phys_sec4.1.aux)
+\openout1 = `DL_Phys_sec4.1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 *geometry* detected driver: dvipdfm
 *geometry* verbose mode - [ preamble ] result:
 * driver: dvipdfm
@@ -837,23 +837,23 @@ LaTeX Font Info:    ... okay on input line 21.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(10.00002pt, 344.19533pt, 10.00002pt)
+* h-part:(L,W,R)=(8.50012pt, 347.19511pt, 8.50012pt)
 * v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
 * \paperwidth=364.19536pt
 * \paperheight=273.14662pt
-* \textwidth=344.19533pt
+* \textwidth=347.19511pt
 * \textheight=244.6939pt
-* \oddsidemargin=-62.26997pt
-* \evensidemargin=-62.26997pt
+* \oddsidemargin=-63.76987pt
+* \evensidemargin=-63.76987pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
-* \topskip=10.0pt
+* \topskip=9.0pt
 * \footskip=14.22636pt
-* \marginparwidth=3.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=7.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -863,10 +863,10 @@ LaTeX Font Info:    ... okay on input line 21.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 21.
-(out/DL_Phys_sec4.2.out) (out/DL_Phys_sec4.2.out)
+Package hyperref Info: Link coloring OFF on input line 22.
+(out/DL_Phys_sec4.1.out) (out/DL_Phys_sec4.1.out)
 \@outlinefile=\write5
-\openout5 = `DL_Phys_sec4.2.out'.
+\openout5 = `DL_Phys_sec4.1.out'.
 
 (c:/texlive/2022/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
@@ -884,96 +884,159 @@ Dictionary: translator-theorem-dictionary, Language: English
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-(out/DL_Phys_sec4.2.nav) [1
+(out/DL_Phys_sec4.1.nav) [1
 
-] (out/DL_Phys_sec4.2.toc) [2
+] [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 111.
 (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 111.
 (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 47.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 111.
 (c:/texlive/2022/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 47.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 111.
 (c:/texlive/2022/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 47.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 111.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 111.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 47.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 111.
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 111.
+
+LaTeX Font Info:    Calculating math sizes for size <20> on input line 111.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13.99994> not available
+(Font)              size <14.4> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <20> not available
+(Font)              size <20.74> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13.99994> not available
+(Font)              size <14.4> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13.99994> not available
+(Font)              size <14.4> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `U/lasy/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `U/lasy/m/n' in size <13.99994> not available
+(Font)              size <14.4> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <13.99994> not available
+(Font)              size <14.4> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <20> not available
+(Font)              size <20.74> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <13.99994> not available
+(Font)              size <14.4> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <13.99994> not available
+(Font)              size <14.4> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `U/lasy/b/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `U/lasy/b/n' in size <13.99994> not available
+(Font)              size <14.4> substituted on input line 111.
+
 [3
 
-]
-LaTeX Font Info:    Font shape `JT1/gt/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 65.
-LaTeX Font Info:    Font shape `JY1/gt/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 65.
-File: image/apple_vector.jpeg Graphic file (type bmp)
-<image/apple_vector.jpeg>
-[4
-
-] [5
+] [4
 
 ]
-File: image/simple_RNN.png Graphic file (type bmp)
-<image/simple_RNN.png>
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 192.
+
+Overfull \hbox (45.1357pt too wide) detected at line 192
+[]
+ []
+
+
+Overfull \hbox (62.5768pt too wide) detected at line 192
+[]
+ []
+
+[5
+
+]
+Overfull \hbox (20.58057pt too wide) detected at line 255
+[]
+ []
+
 [6
 
-]
-File: image/simple_RNN.png Graphic file (type bmp)
-<image/simple_RNN.png>
-[7
+] [7
 
 ] [8
 
-]
-File: image/RNN_diagram.jpeg Graphic file (type bmp)
-<image/RNN_diagram.jpeg>
-[9
-
-] [10
-
-] [11
-
-] [12
-
-] [13
-
-] [14
-
-] [15
-
-] [16
+] [9
 
 ]
 \tf@nav=\write6
-\openout6 = `DL_Phys_sec4.2.nav'.
+\openout6 = `DL_Phys_sec4.1.nav'.
 
 \tf@toc=\write7
-\openout7 = `DL_Phys_sec4.2.toc'.
+\openout7 = `DL_Phys_sec4.1.toc'.
 
 \tf@snm=\write8
-\openout8 = `DL_Phys_sec4.2.snm'.
+\openout8 = `DL_Phys_sec4.1.snm'.
 
-(out/DL_Phys_sec4.2.aux)
-Package rerunfilecheck Info: File `DL_Phys_sec4.2.out' has not changed.
-(rerunfilecheck)             Checksum: 5DA20EBE688FB67434A98A6A3F16B207;340.
+(out/DL_Phys_sec4.1.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.74pt have occurred.
+
+Package rerunfilecheck Info: File `DL_Phys_sec4.1.out' has not changed.
+(rerunfilecheck)             Checksum: 05B9FF7757FE6A446D8F294B02146D28;54.
  ) 
 Here is how much of TeX's memory you used:
- 30257 strings out of 476456
- 614748 string characters out of 5804933
- 1864350 words of memory out of 5000000
- 50361 multiletter control sequences out of 15000+600000
- 560106 words of font info for 102 fonts, out of 8000000 for 9000
+ 30215 strings out of 476456
+ 613173 string characters out of 5804933
+ 1874350 words of memory out of 5000000
+ 50318 multiletter control sequences out of 15000+600000
+ 570060 words of font info for 140 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 128i,20n,122p,445b,796s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,16n,122p,445b,1055s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/DL_Phys_sec4.2.dvi (16 pages, 65688 bytes).
+Output written on out/DL_Phys_sec4.1.dvi (9 pages, 87880 bytes).
